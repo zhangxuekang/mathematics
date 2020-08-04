@@ -36,5 +36,22 @@ function selection(arr) {
   }
   return handleArr;
 }
+/* 插入排序 */
+function insert(arr) {
+  const handleArr = arr.slice();
+  for (let i = 1; i < handleArr.length; i++) {
+    let value = handleArr[i];
+    let j = i - 1;
+    for (; j >= 0; j--) {
+      if (handleArr[j] > value) {
+        handleArr[j + 1] = handleArr[j];
+      } else {
+        break;
+      }
+    }
+    handleArr[j + 1] = value;
+  }
+  return handleArr;
+}
 
-console.log(selection(arr), '---18--mark2020');
+console.log(insert(arr), '---18--mark2020');
