@@ -22,5 +22,19 @@ function bubble(arr) {
   }
   return handleArr;
 }
+/* 选择排序 */
+function selection(arr) {
+  const handleArr = arr.slice();
+  for (let i = 0; i < handleArr.length; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < handleArr.length; j++) {
+      if (handleArr[j] < handleArr[minIndex]) {
+        minIndex = j;
+      }
+    }
+    [handleArr[i], handleArr[minIndex]] = [handleArr[minIndex], handleArr[i]];
+  }
+  return handleArr;
+}
 
-console.log(bubble(arr), '---18--mark2020');
+console.log(selection(arr), '---18--mark2020');
