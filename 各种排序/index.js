@@ -25,6 +25,7 @@ function bubble(arr) {
 /* 选择排序 */
 function selection(arr) {
   const handleArr = arr.slice();
+  
   for (let i = 0; i < handleArr.length; i++) {
     let minIndex = i;
     for (let j = i + 1; j < handleArr.length; j++) {
